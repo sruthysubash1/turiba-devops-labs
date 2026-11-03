@@ -139,7 +139,7 @@ jobs:
             --retry 30 --retry-delay 1 --retry-all-errors \
             http://localhost:5000/
 
-      - name: Show container logs on smoke failure
+      - name: Show container logs on failure
         if: failure()
         run: docker logs course-api-smoke || true
 
